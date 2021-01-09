@@ -28,7 +28,7 @@ function displayDate() {
     $("#currentDay").text(currentHeaderDate);
 }
 
-// Calls the function
+// Calls the function above
 displayDate();
 
 // This contains the timeblocks info
