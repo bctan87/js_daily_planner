@@ -1,3 +1,4 @@
+/* Start Global Styles */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -14,7 +15,9 @@ textarea{
   height: 100%;
   width: 100%;
 }
+/* End Global Styles */
 
+/* Start Header Styles */
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -26,7 +29,9 @@ textarea{
 .description{
   white-space: pre-wrap;
 }
+/* End Header Styles */
 
+/* Start Timeblock styles */
 .time-block{
   text-align: center;
   border-radius: 15px;
@@ -71,3 +76,4 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+/* End Timeblock Styles */
