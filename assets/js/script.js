@@ -1,5 +1,5 @@
 // This function saves the tasks into the localStorage
-function saveTask() {
+function storeTask() {
     localStorage.setItem('timeBlocks', JSON.stringify(timeBlocks));
 }
 
@@ -18,7 +18,7 @@ function currentTask() {
         timeBlocks = storedDay;
     }
 
-    saveTask();
+    storeTask();
     displayTask();
 }
 
@@ -158,16 +158,15 @@ timeBlocks.forEach(function(thisHour) {
 // Calls the function to update the info
 currentTask();
 
-
 // This saves the user input into the local storage
 $(".saveBtn").on("click", function(event) {
     // Prevents the page from loading
     event.preventDefault();
-    let saveIndex = $(this).siblings(".description").children(".future").attr("id");
-    timeBlocks[saveIndex].reminder = $(this).siblings(".description").children(".future").val().trim();
+    let saveTask = $(this).siblings(".description").children(".future, .present, .past").attr("id");
+    timeBlocks[saveTask].reminder = $(this).siblings(".description").children(".future, .present, .past").val().trim();
 
     // To localStorage
-    saveTask();
+    storeTask();
 
     // Updates the taskArea to display the latest saved task
     displayTask();
