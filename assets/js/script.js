@@ -162,6 +162,8 @@ currentTask();
 $(".saveBtn").on("click", function(event) {
     // Prevents the page from loading
     event.preventDefault();
+
+    // This line saves everything placed in the taskAreas, trimmed the excess empty spaces
     let saveTask = $(this).siblings(".description").children(".future, .present, .past").attr("id");
     timeBlocks[saveTask].reminder = $(this).siblings(".description").children(".future, .present, .past").val().trim();
 
